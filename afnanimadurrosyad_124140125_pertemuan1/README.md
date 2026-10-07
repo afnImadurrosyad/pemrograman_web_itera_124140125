@@ -60,7 +60,7 @@ Submit tanpa mengisi form menampilkan pesan error merah di bawah setiap input
 yang tidak valid, dan barang dicegah masuk keranjang.
 
 ### 3. Hasil perhitungan kalkulator & tabel keranjang
-![Hasil kalkulator dan tabel](screenshot-hasil.png)
+![Hasil kalkulator dan tabel](screenshot-hasil.jpg)
 Contoh transaksi 3 barang: total Rp 59.000 → diskon promo `HEMAT10` 10%
 (Rp 5.900) → total bayar Rp 53.100 → uang bayar Rp 60.000 → kembalian
 Rp 6.900.
