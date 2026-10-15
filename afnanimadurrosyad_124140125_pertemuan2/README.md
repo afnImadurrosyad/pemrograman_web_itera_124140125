@@ -24,7 +24,7 @@ Varian layout kedua dari tugas Personal Dashboard: tata letak **bento grid** den
 ## Struktur File
 
 ```
-afnanimadurrosyad_124140125_pertemuan2_dark/
+afnanimadurrosyad_124140125_pertemuan2/
 ├── index.html          # Struktur bento: topbar + 4 tile
 ├── css/
 │   └── style.css       # Sistem desain gelap (tanpa variabel tema terang)
@@ -62,7 +62,7 @@ afnanimadurrosyad_124140125_pertemuan2_dark/
 Buka `index.html` langsung di browser, atau jalankan server lokal:
 
 ```bash
-cd afnanimadurrosyad_124140125_pertemuan2_dark
+cd afnanimadurrosyad_124140125_pertemuan2
 python3 -m http.server 8000
 # buka http://localhost:8000
 ```
