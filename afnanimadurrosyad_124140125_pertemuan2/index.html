@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard pribadi mode gelap: sapaan, jam, todo, cuaca, dan quote harian.">
+  <title>Dashboard Pribadi — Afnan Imadurrosyad</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span>Dashboard Pribadi</span>
+    </div>
+    <div class="topbar-clock">
+      <span id="clock" class="clock">--:--:--</span>
+      <span id="topDate" class="muted"></span>
+    </div>
+  </header>
+
+  <main class="bento">
+    <!-- Sapaan + statistik ringkas -->
+    <section class="tile tile-greeting" aria-labelledby="greeting">
+      <p class="eyebrow" id="dateLine"></p>
+      <h1 id="greeting">Selamat datang</h1>
+      <p class="lede">Satu fokus dalam satu waktu. Kerjakan yang paling penting dulu.</p>
+      <div class="mini-stats" id="miniStats" aria-live="polite"></div>
+    </section>
+
+    <!-- Quote harian -->
+    <section class="tile tile-quote" aria-labelledby="quoteTitle">
+      <div class="tile-head">
+        <h2 id="quoteTitle">Quote Hari Ini</h2>
+        <button id="quoteRefresh" class="icon-btn" type="button" title="Quote lain" aria-label="Tampilkan quote lain">↻</button>
+      </div>
+      <div id="quoteBody" class="quote-body">
+        <p class="muted">Memuat quote…</p>
+      </div>
+    </section>
+
+    <!-- Todo: kartu hero -->
+    <section class="tile tile-todo" aria-labelledby="todoTitle">
+      <div class="tile-head">
+        <h2 id="todoTitle">Daftar Tugas</h2>
+        <span class="pill" id="todoCount">0 tugas</span>
+      </div>
+      <form id="todoForm" class="todo-form" autocomplete="off">
+        <label class="sr-only" for="todoInput">Tugas baru</label>
+        <input id="todoInput" type="text" placeholder="Tulis tugas baru, tekan Enter…" maxlength="120">
+        <button type="submit" class="btn btn-accent">＋ Tambah</button>
+      </form>
+      <div class="todo-tools">
+        <div class="filters" role="tablist" aria-label="Filter tugas">
+          <button class="chip is-active" data-filter="semua" role="tab" aria-selected="true">Semua</button>
+          <button class="chip" data-filter="aktif" role="tab" aria-selected="false">Aktif</button>
+          <button class="chip" data-filter="selesai" role="tab" aria-selected="false">Selesai</button>
+        </div>
+        <label class="sr-only" for="todoSearch">Cari tugas</label>
+        <input id="todoSearch" class="search" type="search" placeholder="Cari tugas…">
+      </div>
+      <ul id="todoList" class="todo-list"></ul>
+    </section>
+
+    <!-- Cuaca -->
+    <section class="tile tile-weather" aria-labelledby="weatherTitle">
+      <div class="tile-head">
+        <h2 id="weatherTitle">Cuaca</h2>
+        <button id="weatherRefresh" class="icon-btn" type="button" title="Muat ulang cuaca" aria-label="Muat ulang cuaca">↻</button>
+      </div>
+      <div id="weatherBody" class="weather-body">
+        <p class="muted">Memuat data cuaca…</p>
+      </div>
+      <form id="cityForm" class="city-form" autocomplete="off">
+        <label class="sr-only" for="cityInput">Ganti kota</label>
+        <input id="cityInput" type="text" placeholder="Ganti kota… (cth: Jakarta)">
+        <button type="submit" class="btn">Ganti</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Dashboard Pribadi · Afnan Imadurrosyad (124140125) · Tugas Praktikum PAW Pertemuan 2</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
