@@ -1,4 +1,4 @@
-# KasirKantin — Mini POS
+# PizzaKuy 🍕 — Mini POS
 
 ## Identitas
 - **Nama Lengkap:** Afnan Imadurrosyad
@@ -7,15 +7,15 @@
 - **Pertemuan:** 1 — JavaScript Dasar
 
 ## Deskripsi Aplikasi
-**KasirKantin** adalah aplikasi web Kasir & Keranjang Belanja Sederhana
-(Mini POS) untuk kasir kantin atau toko kampus. Aplikasi ini dibuat untuk
+**PizzaKuy** adalah aplikasi web Kasir & Keranjang Belanja Sederhana
+(Mini POS) untuk toko pizza. Aplikasi ini dibuat untuk
 memenuhi tugas praktikum Pertemuan 1 (JavaScript Dasar) dengan tujuan
 menyatukan tiga kompetensi dasar: **validasi input form**, **perhitungan
 kalkulator otomatis**, dan **manajemen keranjang belanja berbasis
 localStorage**.
 
-**Studi kasus yang dipilih:** kasir kantin kampus yang membutuhkan pencatatan
-transaksi cepat — tambah barang, lihat total dan diskon otomatis, terima uang
+**Studi kasus yang dipilih:** kasir toko pizza yang membutuhkan pencatatan
+transaksi cepat — tambah menu, lihat total dan diskon otomatis, terima uang
 bayar, hitung kembalian — dengan data keranjang yang tidak hilang saat halaman
 di-refresh.
 
