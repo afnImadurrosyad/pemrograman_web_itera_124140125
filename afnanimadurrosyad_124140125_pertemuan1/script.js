@@ -1,5 +1,5 @@
 /* ==========================================================================
-   KasirKantin — Mini POS
+   PizzaKuy — Mini POS
    Logika aplikasi: validasi form, kalkulator otomatis, dan manajemen
    keranjang dengan localStorage.
 
@@ -8,12 +8,12 @@
    ========================================================================== */
 
 // ---- Konstanta aturan bisnis ----
-const STORAGE_KEY = "kasirkantin_keranjang";
+const STORAGE_KEY = "pizzakuy_keranjang";
 const NAMA_MINIMAL = 3;
 const HARGA_MINIMAL = 500;
 const BATAS_DISKON_OTOMATIS = 50000;
 const PERSEN_DISKON = 0.1;
-const KODE_PROMO = "HEMAT10";
+const KODE_PROMO = "PIZZA10";
 
 // ---- State aplikasi ----
 let keranjang = [];
@@ -253,7 +253,7 @@ const tambahBarang = (event) => {
   let valid = true;
 
   if (!validasiNama(nama)) {
-    tampilkanError(inputNama, `Nama barang wajib diisi, minimal ${NAMA_MINIMAL} karakter.`);
+    tampilkanError(inputNama, `Nama menu wajib diisi, minimal ${NAMA_MINIMAL} karakter.`);
     valid = false;
   } else {
     sembunyikanError(inputNama);
@@ -273,7 +273,7 @@ const tambahBarang = (event) => {
     sembunyikanError(inputQty);
   }
 
-  // Data tidak valid: cegah barang masuk keranjang.
+  // Data tidak valid: cegah menu masuk keranjang.
   if (!valid) return;
 
   keranjang.push({
