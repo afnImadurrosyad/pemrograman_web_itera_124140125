@@ -1,30 +1,31 @@
 /* ==========================================================================
-   KasirKantin — Mini POS
+   PizzaKuy — Mini POS
    Design system custom (CSS murni dominan).
    Arah desain: kartu modular ala bento + gaya Swiss yang bersih,
-   dengan aksen biru-ember. Tanpa gradien ungu generik.
+   dengan aksen merah tomat dan kuning keju. Ornamen pizza 🍕
+   di topbar dan empty state.
    Teknik visual di sini melayani satu tujuan: kasir membaca angka
    dengan cepat dan tidak salah tekan.
    ========================================================================== */
 
 :root {
-  --bg: #f4f6fa;
+  --bg: #fff8f1;
   --card: #ffffff;
-  --ink: #1e293b;
-  --muted: #64748b;
-  --border: #e2e8f0;
-  --primary: #1e40af;
-  --primary-dark: #173483;
-  --primary-soft: #e8eefc;
-  --accent: #d97706;
-  --accent-soft: #fef3e2;
-  --success: #15803d;
-  --success-soft: #e7f6ec;
+  --ink: #2b2118;
+  --muted: #8a7a6a;
+  --border: #f0e2d0;
+  --primary: #d62828;
+  --primary-dark: #a51f1f;
+  --primary-soft: #fde9e9;
+  --accent: #e09f3e;
+  --accent-soft: #fdf3e0;
+  --success: #2a9d48;
+  --success-soft: #e9f7ee;
   --danger: #dc2626;
   --danger-soft: #fdecec;
   --radius: 18px;
   --radius-sm: 12px;
-  --shadow: 0 4px 6px rgba(15, 23, 42, 0.05), 0 10px 24px rgba(15, 23, 42, 0.06);
+  --shadow: 0 4px 6px rgba(120, 53, 15, 0.05), 0 10px 24px rgba(120, 53, 15, 0.07);
   --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -88,10 +89,67 @@ body {
   font-weight: 600;
   color: var(--primary);
   background: var(--primary-soft);
-  border: 1px solid #c9d8f8;
+  border: 1px solid #f3c9c9;
   padding: 6px 12px;
   border-radius: 999px;
   white-space: nowrap;
+}
+
+
+/* ================= Ornamen Pizza ================= */
+.topbar {
+  border-bottom: 3px solid var(--primary);
+  overflow: hidden;
+}
+
+.topbar-inner { position: relative; }
+
+.topbar-inner::before,
+.topbar-inner::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.topbar-inner::before {
+  content: "\1F355";
+  right: 190px;
+  font-size: 2rem;
+  opacity: 0.16;
+  transform: translateY(-50%) rotate(-14deg);
+}
+
+.topbar-inner::after {
+  content: "\1F355";
+  right: 130px;
+  font-size: 1.4rem;
+  opacity: 0.12;
+  transform: translateY(-50%) rotate(12deg);
+}
+
+.brand-mark {
+  background: linear-gradient(135deg, var(--primary), #f05252);
+  box-shadow: 0 6px 14px rgba(214, 40, 40, 0.35);
+}
+
+/* Emoji pizza besar untuk empty state */
+.pizza-empty {
+  font-size: 3.4rem;
+  line-height: 1;
+  display: block;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 6px 10px rgba(214, 40, 40, 0.18));
+}
+
+/* Hiasan footer */
+.footer p::before { content: "\1F355  "; }
+.footer p::after { content: "  \1F355"; }
+
+@media (max-width: 560px) {
+  .topbar-inner::before,
+  .topbar-inner::after { display: none; }
 }
 
 /* ================= Layout ================= */
@@ -160,18 +218,18 @@ body {
   padding: 11px 14px;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
-  background: #fbfcfe;
+  background: #fffdf9;
   color: var(--ink);
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.field input::placeholder { color: #a3b0c2; }
+.field input::placeholder { color: #c4a98c; }
 
 .field input:focus,
 .promo-input-group input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.14);
+  box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.14);
   background: #fff;
 }
 
@@ -230,7 +288,7 @@ body {
 .btn-primary {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 6px 14px rgba(30, 64, 175, 0.28);
+  box-shadow: 0 6px 14px rgba(214, 40, 40, 0.28);
 }
 
 .btn-primary:hover { background: var(--primary-dark); }
@@ -241,7 +299,7 @@ body {
   padding: 11px 16px;
 }
 
-.btn-secondary:hover { background: #d9e4fb; }
+.btn-secondary:hover { background: #f8d9d9; }
 
 .btn-danger-outline {
   background: transparent;
@@ -279,7 +337,7 @@ body {
   font-size: 0.72rem;
   font-weight: 700;
   background: var(--accent-soft);
-  border: 1px solid #f5d9a8;
+  border: 1px solid #f0d09a;
   padding: 2px 8px;
   border-radius: 999px;
   margin-left: 6px;
@@ -331,7 +389,7 @@ body {
 /* ================= Pembayaran ================= */
 .kembalian-box {
   margin-top: 6px;
-  background: #f8fafc;
+  background: #fff4e8;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 16px;
@@ -406,7 +464,7 @@ body {
 }
 
 .cart-table tbody tr:last-child td { border-bottom: none; }
-.cart-table tbody tr:hover { background: #f8fafc; }
+.cart-table tbody tr:hover { background: #fff4e8; }
 
 .col-no { width: 52px; color: var(--muted); }
 .col-num { text-align: right; }
@@ -441,7 +499,7 @@ body {
   color: var(--muted);
 }
 
-.empty-state svg { color: #b6c2d2; margin-bottom: 12px; }
+.empty-state svg { color: #d9bfa4; margin-bottom: 12px; }
 .empty-title { font-size: 1rem; font-weight: 700; color: var(--ink); margin: 0 0 4px; }
 .empty-hint { font-size: 0.85rem; margin: 0; }
 
