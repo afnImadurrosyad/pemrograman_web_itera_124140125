@@ -1,5 +1,5 @@
 /* ============================================================
-   main.js — entry point varian "Midnight Bento" (dark-only).
+   main.js — entry point: wiring semua event & inisialisasi.
    Tanpa toggle tema: satu palet gelap untuk seluruh aplikasi.
    Menunjukkan: module import/export, async/await, arrow function,
    destructuring, spread, try/catch, optional chaining.
@@ -12,7 +12,7 @@ import {
   renderQuote, renderStats, renderTodos, renderWeather, startClock,
 } from './ui.js';
 
-// --- Penyimpanan lokal (key sendiri supaya tidak bentrok dengan varian terang) ---
+// --- Penyimpanan lokal ---
 const todoStore = new Storage('dashdark.todos.v1');
 const cityStore = new Storage('dashdark.city.v1');
 
