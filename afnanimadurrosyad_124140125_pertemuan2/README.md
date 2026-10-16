@@ -1,11 +1,11 @@
-# Dashboard Pribadi — Varian "Midnight Bento" (Dark Only)
+# Dashboard Pribadi
 
 **Nama:** Afnan Imadurrosyad
 **NIM:** 124140125
 **Kelas:** RB
 **Mata Kuliah:** Pengembangan Aplikasi Web — Praktikum Pertemuan 2
 
-Varian layout kedua dari tugas Personal Dashboard: tata letak **bento grid** dengan palet **gelap saja** (tanpa toggle tema). Sapaan + statistik di tile sorot, quote harian di tile pendamping, daftar tugas sebagai kartu hero, dan cuaca dengan angka suhu besar.
+Aplikasi dashboard pribadi dengan tata letak **bento grid** dan palet **gelap**. Sapaan + statistik di tile sorot, quote harian di tile pendamping, daftar tugas sebagai kartu hero, dan cuaca dengan angka suhu besar.
 
 ## Fitur
 
