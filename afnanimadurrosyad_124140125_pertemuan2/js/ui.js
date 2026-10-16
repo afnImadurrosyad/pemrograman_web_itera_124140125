@@ -1,5 +1,5 @@
 /* ============================================================
-   ui.js — render ke DOM untuk varian "Midnight Bento" (dark-only).
+   ui.js — render ke DOM untuk layout bento.
    Menunjukkan: template literals, arrow function, destructuring,
    optional chaining, nullish coalescing.
    ============================================================ */
