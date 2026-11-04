@@ -81,6 +81,3 @@ afnanimadurrosyad_124140125_pertemuan4/
 ├── screenshot-tugas2-nilai.png
 └── screenshot-tugas3-modul.png
 ```
-
-`.gitignore` sudah mencantumkan `venv/` dan `__pycache__/` agar
-keduanya tidak terunggah ke repositori.
